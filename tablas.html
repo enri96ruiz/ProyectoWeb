@@ -1,0 +1,169 @@
+<!doctype html>
+<head>
+	<title>horario escolar</title>
+	<style>
+		.horario{
+			margin-top: 14px;
+			width: 80%;
+		}
+		.cuerpo{
+			
+			
+			margin: 0 auto;
+		}
+		.hora{
+			text-align:center;
+			width:20%;
+            padding: 5px;
+		}
+        .linea{
+            border: red solid 1px;
+            margin-top: 13px;
+        }
+	#navegacion{
+		background-color: turquoise;
+	}
+	li{
+		display: inline;
+		background-color:yellow;
+	}
+	
+     a:visited{
+                color:  blue;
+                
+            }
+     a:hover{
+                color:tomato;
+                
+            }
+     a:active{
+                color:turquoise;
+                
+            }
+			 th:hover{
+                background-color: brown;
+            }
+			td:hover{
+				background-color:tomato;
+			}
+
+	</style>
+    <script>
+    
+	var nombre=window.prompt("Introduce tu nombre")
+    var apellido=window.prompt("Introduce tu apellido");
+    window.alert("Este es tu horario escolar");    
+    </script>
+            <link rel="shortut icon" type="image/x-icon" href="imagenes/calendario.ico">
+
+</head>
+<html>
+<body class="cuerpo" id="cuerpo">
+<header>
+	<h1 style="text-align: center">Horario Escolar</h1>
+</header>
+<nav id="navegacion">
+<ul>
+	<li><a href="#">Profesores</a></li>
+	<li><a href="#">Alumnos</a></li>
+	<li><a href="#">Asignaturas</a></li>
+</ul>
+</nav>
+    
+<table class="horario"align="center"bgcolor="turquoise"
+       cellspacing="0" cellpadding="4" border="1">
+
+<tr>
+		<td>&nbsp;</td>
+		<th>L</th>
+		<th>M</th>
+		<th>X</th>
+		<th>J</th>
+		<th>V</th>
+
+</tr>
+<tr >
+		<td class="hora">16:00/16:50</td>
+		<th >PSP</th>
+		<th rowspan="2">AD</th>
+		<th rowspan="2" >DI</th>
+		<th rowspan="2" >EIE</th>
+		<th >IN</th>
+</tr>
+
+<tr>
+		<td class="hora">16:50/17:40</td>
+		<th>PMD</th>
+		<th>AD</th>
+
+		
+</tr>
+
+<tr>
+	<td class="hora">17:40/17:55</td>
+		<th align="center" colspan="6"bgcolor="lime">RECREO</th>
+		
+</tr>
+<tr>
+		<td class="hora">17:55/18:45</td>
+		<th>PMD</th>
+		<th>EIE</th>
+		<th>DI</th>
+		<th rowspan="2">AD</th>
+		<th>AD</th>
+</tr>
+<tr>
+		<td class="hora">18:45/19:35</td>
+		<th>DI</th>
+		<th>PSP</th>
+		<th>IN</th>
+		<th>SGE</th>		
+</tr>
+<tr>
+<td class="hora">19:35/19:50</td>
+		<th align="center"colspan="6"bgcolor="lime">RECREO</th>
+		
+</tr>
+<tr>
+		<td class="hora">19:50/20:40</td>
+		<th rowspan="2">DI</th>
+		<th rowspan="2">SGE</th>
+		<th>PMD</th>
+		<th rowspan="2">PMD</th>
+		<th rowspan="2">SGE</th>
+</tr>
+<tr>
+		<td class="hora">20:40/21:30</td>
+		<th>PSP</th>
+</tr>
+</table>
+    
+    <hr class="linea">
+    <div align="center">
+    <img width="330" height="250"
+         src="imagenes/motivacion.jpg" />
+    </div>    
+   <script>
+    document.write("<p>");
+    document.write("Bienvenido "+nombre+ " "+apellido);   
+    document.write("<p>");
+	
+	var cuerpo=document.getElementById("cuerpo");
+    var colorWeb=prompt("Introduce el color de fondo. Azul/Vede/Rojo")
+    
+    if(colorWeb=="Azul"){
+        cuerpo.style.backgroundColor="blue";
+    }
+    else if(colorWeb=="Rojo"){
+        cuerpo.style.backgroundColor="red";
+    }
+    else if(colorWeb=="Verde"){
+        cuerpo.style.backgroundColor="green";
+    }
+    else{
+      alert("Ese color no está contemplado");
+    }
+   </script>
+
+</body>
+</html>
