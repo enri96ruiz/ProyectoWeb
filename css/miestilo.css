@@ -1,0 +1,68 @@
+.horario{
+    margin-top: 14px;
+    width: 80%;
+}
+.cuerpo{
+    background-color: khaki;
+    background-image: url(madera.jpg);
+    background-repeat: repeat-y;
+    /*el fondo se mueve al centro y empieza a repetirse
+    desde arriba*/
+    background-position: center top;
+    width: 760px;
+    /*el contenido del body se mueve al centro */       
+    margin: 0 auto;
+    
+}
+.hora{
+    text-align:center;
+    width:20%;
+    padding: 5px;
+}
+
+#navegacion{
+background-color: turquoise;
+}
+li{
+display: inline;
+background-color:yellow;
+}
+
+a:visited{
+        color:  blue;
+        
+    }
+a:hover{
+        color:tomato;
+        
+    }
+a:active{
+        color:turquoise;
+        
+    }
+     th:hover{
+        background-color: brown;
+    }
+    td:hover{
+        background-color:tomato;
+    }
+    @font-face {
+        font-family: 'MiPropiaFuente';
+        src: url('rest.ttf');
+    }
+    #titulo{
+        font:bold 56px 'MiPropiaFuente';
+        text-shadow: red 4px 4px 2px;
+        text-align: center;
+    }
+    #pie{
+        
+        clear: both; 
+        padding-top: 35px; 
+    }
+    #barralateral{
+        background-color: salmon;
+        float: left;
+        height: 450px;
+        width: 150px;
+    }
