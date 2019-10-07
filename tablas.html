@@ -1,66 +1,45 @@
 <!doctype html>
 <head>
 	<title>horario escolar</title>
-	<style>
-		.horario{
-			margin-top: 14px;
-			width: 80%;
-		}
-		.cuerpo{
-			
-			
-			margin: 0 auto;
-		}
-		.hora{
-			text-align:center;
-			width:20%;
-            padding: 5px;
-		}
-        .linea{
-            border: red solid 1px;
-            margin-top: 13px;
-        }
-	#navegacion{
-		background-color: turquoise;
-	}
-	li{
-		display: inline;
-		background-color:yellow;
-	}
-	
-     a:visited{
-                color:  blue;
-                
-            }
-     a:hover{
-                color:tomato;
-                
-            }
-     a:active{
-                color:turquoise;
-                
-            }
-			 th:hover{
-                background-color: brown;
-            }
-			td:hover{
-				background-color:tomato;
-			}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/miestilo.css"/>
     <script>
-    
 	var nombre=window.prompt("Introduce tu nombre")
     var apellido=window.prompt("Introduce tu apellido");
-    window.alert("Este es tu horario escolar");    
-    </script>
-            <link rel="shortut icon" type="image/x-icon" href="imagenes/calendario.ico">
+	</script>
+	<script src="Jquery/jquery-1.6.3.min.js"></script>
+	<script>
+	
+    var colorWeb=prompt("Introduce el color de fondo. Azul/Verde/Rojo")
+    
+	</script>
 
+            <link rel="shortut icon" type="image/x-icon" href="imagenes/calendario.ico">
 </head>
 <html>
-<body class="cuerpo" id="cuerpo">
+<body  class="cuerpo" id="cuerpo">
+	<script>
+	var cuerpo=document.getElementById("cuerpo");
+	
+    if(colorWeb=="Azul"){
+        cuerpo.style.backgroundColor="blue";
+    }
+    else if(colorWeb=="Rojo"){
+        cuerpo.style.backgroundColor="red";
+    }
+    else if(colorWeb=="Verde"){
+        cuerpo.style.backgroundColor="green";
+    }
+    else{
+      alert("Ese color no está contemplado");
+    }
+	</script>
+		<script>
+				$(function(){
+								$("body").hide().fadeIn(3000);
+							});
+		</script>
 <header>
-	<h1 style="text-align: center">Horario Escolar</h1>
+	<h1 id="titulo">Horario Escolar</h1>
 </header>
 <nav id="navegacion">
 <ul>
@@ -69,7 +48,12 @@
 	<li><a href="#">Asignaturas</a></li>
 </ul>
 </nav>
-    
+<aside id="barralateral">
+	<blockquote> Historia del centro</blockquote>
+	<blockquote> Secretaría</blockquote>
+	<blockquote> Teléfonos de contacto</blockquote>
+</aside>
+   <section> 
 <table class="horario"align="center"bgcolor="turquoise"
        cellspacing="0" cellpadding="4" border="1">
 
@@ -136,34 +120,20 @@
 		<td class="hora">20:40/21:30</td>
 		<th>PSP</th>
 </tr>
-</table>
-    
-    <hr class="linea">
-    <div align="center">
-    <img width="330" height="250"
-         src="imagenes/motivacion.jpg" />
-    </div>    
-   <script>
-    document.write("<p>");
-    document.write("Bienvenido "+nombre+ " "+apellido);   
-    document.write("<p>");
-	
-	var cuerpo=document.getElementById("cuerpo");
-    var colorWeb=prompt("Introduce el color de fondo. Azul/Vede/Rojo")
-    
-    if(colorWeb=="Azul"){
-        cuerpo.style.backgroundColor="blue";
-    }
-    else if(colorWeb=="Rojo"){
-        cuerpo.style.backgroundColor="red";
-    }
-    else if(colorWeb=="Verde"){
-        cuerpo.style.backgroundColor="green";
-    }
-    else{
-      alert("Ese color no está contemplado");
-    }
-   </script>
 
+</table>
+   
+   <script>
+    document.write("<p><b>");
+    document.write("Bienvenido "+nombre+ " "+apellido);   
+    document.write("</b><p>");
+	
+	
+   </script>
+	</section>
+
+	<footer id="pie">
+		<small><b>&copy; Derecho reservado 2019</b></small>
+	</footer>
 </body>
 </html>
